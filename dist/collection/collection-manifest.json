@@ -1,8 +1,8 @@
 {
   "entries": [
     "components/modal-component/modal-component.js",
-    "components/input-component/input-component.js",
-    "components/button-component/button-component.js"
+    "components/button-component/button-component.js",
+    "components/input-component/input-component.js"
   ],
   "compiler": {
     "name": "@stencil/core",
