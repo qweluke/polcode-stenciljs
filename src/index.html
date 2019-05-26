@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap&effect=fire-animation" rel="stylesheet">
+  <title>Polocode Web Components</title>
+  <script type="module" src="/build/mycomponent.esm.js"></script>
+  <script nomodule src="/build/mycomponent.js"></script>
+  
+  <style>
+    p {
+      font-size: 2rem;
+      font-weight: 800;
+      display: block;
+      padding: 1rem;
+      text-align: center;
+      letter-spacing: .8rem;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- buttons -->
+  <polocode-button onClick='clickFunction()' text='Polocode DevTeam!'></polocode-button>
+  
+  <polocode-button text="I'm success button!" class='success' style="--txt-color: #000">
+  </polocode-button>
+
+  <polocode-button disabled class='info' style="--txt-color: #000">
+    I am disabled!
+  </polocode-button>
+
+  <img src="http://rainbowdivider.com/images/dividers/movrblin03.gif" alt="bar" style="width:100%; height:2px;margin:2rem 0;">
+  <!-- inputs -->
+
+  <polocode-input label-txt='Last name' value='Łukasz'></polocode-input>
+
+  <br/>
+
+  <polocode-input  id='fName' placeholder='First name' error='' label-txt='First name'></polocode-input>
+
+  <br/>
+
+  <polocode-input id='fName' placeholder='email name' error=''
+></polocode-input>
+    
+    <p id="polocode-input-text" class='font-effect-fire-animation'></p>
+
+
+
+  <img src="http://rainbowdivider.com/images/dividers/divider_123.gif" alt="bar" style="width:100%; height:15px;margin:2rem 0;">
+
+
+  <polocode-button onClick='showModal(1);' text='Modal 1!'></polocode-button>
+
+  <button onClick='showModal(1);'>Show Modal</button>
+  <button onClick='showModal(2);'>Show Modal</button>
+
+  <polocode-modal id='modal_1'>Hello :-)</polocode-modal>
+  
+  <polocode-modal id='modal_2' style="--modal-bg-color:#f44336cc;">
+      <div style='text-align: center;'>
+        <img src="http://rainbowdivider.com/images/dividers/construction.gif" alt="">
+        <br/>
+        Lorem ipsum dolor<br/>
+        Sitt amet
+        <br/>
+        <img src="http://rainbowdivider.com/images/dividers/construction.gif" alt="">
+      </div>
+  </polocode-modal>
+
+
+
+  <script>
+    window.onload = () => {
+
+      customElements.whenDefined('polocode-input').then( () => {
+        var polocodeInput = document.querySelector("polocode-input#fName");
+
+        var input = polocodeInput.shadowRoot.querySelector("input");
+        var pElement = document.getElementById('polocode-input-text');
+
+        input.addEventListener('keyup', event => {
+          if(event.target.value === 'polocode') {
+            polocodeInput.setAttribute('error', 'Invalid value: ' + event.target.value)
+          } else {
+            polocodeInput.setAttribute('error', '')
+          }
+          pElement.innerHTML = event.target.value;
+        });
+       });
+
+     }
+
+     showModal = id => {
+      customElements.whenDefined('polocode-modal').then( () => {
+        var polocodeModal = document.querySelector("polocode-modal#modal_" + id);
+        polocodeModal.setAttribute('is-visible', true)
+       });
+     }
+
+    clickFunction = () => {
+        alert('ok');
+    }
+
+
+
+    </script>
+</body>
+</html>
