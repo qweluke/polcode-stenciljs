@@ -21,15 +21,12 @@ export class BtnComponent {
     return  (
         <div class={`polocode-input-wrapper`}>
             {this.labelTxt && <label htmlFor={this.id}>{this.labelTxt}</label>}
-            <input type="text"
-                placeholder={this.placeholder}
-                class={`polocode-input ${this.labelTxt ? 'with-label' : 'no-label'} `} id={this.id}
+            <input type="text" placeholder={this.placeholder} id={this.id}
+                class={`polocode-input ${this.labelTxt ? 'with-label' : 'no-label'} `}
                 value={this.value} required={this.required} />
-            {this.error && <div class="error">
-                {this.error}
-            </div>}
+            {this.error && <div class="error">{this.error}</div>}
         </div>
     )
-
   }
 }
+
