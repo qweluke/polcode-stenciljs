@@ -75,25 +75,23 @@
 
 
 <script>window.onload = (() => {
-    window.onload = () => {
 
-        customElements.whenDefined('polocode-input').then( () => {
-            var polocodeInput = document.querySelector("polocode-input#fName");
+    customElements.whenDefined('polocode-input').then( () => {
+        console.log('polocode-input defined')
+        var polocodeInput = document.querySelector("polocode-input#fName");
 
-            var input = polocodeInput.shadowRoot.querySelector("input");
-            var pElement = document.getElementById('polocode-input-text');
+        var input = polocodeInput.shadowRoot.querySelector("input");
+        var pElement = document.getElementById('polocode-input-text');
 
-            input.addEventListener('keyup', event => {
-                if(event.target.value === 'polocode') {
-                    polocodeInput.setAttribute('error', 'Invalid value: ' + event.target.value)
-                } else {
-                    polocodeInput.setAttribute('error', '')
-                }
-                pElement.innerHTML = event.target.value;
-            });
+        input.addEventListener('keyup', event => {
+            if(event.target.value === 'polocode') {
+                polocodeInput.setAttribute('error', 'Invalid value: ' + event.target.value)
+            } else {
+                polocodeInput.setAttribute('error', '')
+            }
+            pElement.innerHTML = event.target.value;
         });
-
-    }
+    });
 
     showModal = id => {
         customElements.whenDefined('polocode-modal').then( () => {
@@ -105,6 +103,7 @@
     clickFunction = () => {
         alert('ok');
     }
-});</script>
+})
+</script>
 </body>
 </html>
