@@ -1,0 +1,27 @@
+{
+  "namespace": "mycomponent",
+  "fsNamespace": "mycomponent",
+  "loader": "../mycomponent.js",
+  "core": "mycomponent.qel6km6w.js",
+  "corePolyfilled": "mycomponent.c1gpbrtf.js",
+  "components": {
+    "polocode-button": {
+      "bundleIds": {
+        "$": "qs7jqhii"
+      },
+      "encapsulation": "shadow"
+    },
+    "polocode-input": {
+      "bundleIds": {
+        "$": "lbjgvst7"
+      },
+      "encapsulation": "shadow"
+    },
+    "polocode-modal": {
+      "bundleIds": {
+        "$": "mswsqjfw"
+      },
+      "encapsulation": "shadow"
+    }
+  }
+}

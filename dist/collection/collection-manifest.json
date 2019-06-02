@@ -1,14 +1,138 @@
 {
-  "entries": [
-    "components/modal-component/modal-component.js",
-    "components/input-component/input-component.js",
-    "components/button-component/button-component.js"
+  "components": [
+    {
+      "tag": "polocode-button",
+      "dependencies": [],
+      "componentClass": "BtnComponent",
+      "componentPath": "components/button-component/button-component.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/button-component/button.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "class",
+          "type": "String",
+          "attr": "class"
+        },
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "attr": "text"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "polocode-input",
+      "dependencies": [],
+      "componentClass": "BtnComponent",
+      "componentPath": "components/input-component/input-component.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/input-component/input.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "class",
+          "type": "String",
+          "attr": "class"
+        },
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "error",
+          "type": "String",
+          "attr": "error"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "attr": "id"
+        },
+        {
+          "name": "labelTxt",
+          "type": "String",
+          "attr": "label-txt"
+        },
+        {
+          "name": "placeholder",
+          "type": "String",
+          "attr": "placeholder"
+        },
+        {
+          "name": "required",
+          "type": "Boolean",
+          "attr": "required"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "attr": "value"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "polocode-modal",
+      "dependencies": [],
+      "componentClass": "BtnComponent",
+      "componentPath": "components/modal-component/modal-component.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/modal-component/modal.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "id",
+          "type": "String",
+          "attr": "id"
+        },
+        {
+          "name": "isVisible",
+          "type": "Boolean",
+          "reflectToAttr": true,
+          "attr": "is-visible"
+        }
+      ],
+      "shadow": true
+    }
   ],
+  "collections": [],
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.0.0-alpha.33",
-    "typescriptVersion": "3.4.5"
+    "version": "0.16.4",
+    "typescriptVersion": "3.2.2"
   },
-  "collections": [],
   "bundles": []
 }

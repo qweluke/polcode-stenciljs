@@ -1,4 +1,3 @@
-import { h } from '@stencil/core';
 export class BtnComponent {
     constructor() {
         this.type = 'text';
@@ -18,173 +17,43 @@ export class BtnComponent {
     }
     static get is() { return "polocode-input"; }
     static get encapsulation() { return "shadow"; }
-    static get originalStyleUrls() { return {
-        "$": ["input.css"]
-    }; }
-    static get styleUrls() { return {
-        "$": ["input.css"]
-    }; }
     static get properties() { return {
-        "type": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "type",
-            "reflect": false,
-            "defaultValue": "'text'"
+        "class": {
+            "type": String,
+            "attr": "class"
         },
         "disabled": {
-            "type": "boolean",
-            "mutable": false,
-            "complexType": {
-                "original": "boolean",
-                "resolved": "boolean",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "disabled",
-            "reflect": false,
-            "defaultValue": "false"
-        },
-        "required": {
-            "type": "boolean",
-            "mutable": false,
-            "complexType": {
-                "original": "boolean",
-                "resolved": "boolean",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "required",
-            "reflect": false,
-            "defaultValue": "false"
-        },
-        "labelTxt": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "label-txt",
-            "reflect": false,
-            "defaultValue": "''"
-        },
-        "class": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "class",
-            "reflect": false,
-            "defaultValue": "''"
-        },
-        "value": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "value",
-            "reflect": false,
-            "defaultValue": "''"
-        },
-        "placeholder": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "placeholder",
-            "reflect": false,
-            "defaultValue": "''"
+            "type": Boolean,
+            "attr": "disabled"
         },
         "error": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "error",
-            "reflect": false,
-            "defaultValue": "''"
+            "type": String,
+            "attr": "error"
         },
         "id": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "id",
-            "reflect": false
+            "type": String,
+            "attr": "id"
+        },
+        "labelTxt": {
+            "type": String,
+            "attr": "label-txt"
+        },
+        "placeholder": {
+            "type": String,
+            "attr": "placeholder"
+        },
+        "required": {
+            "type": Boolean,
+            "attr": "required"
+        },
+        "type": {
+            "type": String,
+            "attr": "type"
+        },
+        "value": {
+            "type": String,
+            "attr": "value"
         }
     }; }
+    static get style() { return "/**style-placeholder:polocode-input:**/"; }
 }

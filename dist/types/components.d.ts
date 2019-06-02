@@ -5,17 +5,26 @@
  */
 
 
-import { HTMLStencilElement, JSXBase } from './stencil.core';
-import { JSX } from './stencil.core';
+import './stencil.core';
+
+
 
 
 export namespace Components {
+
   interface PolocodeButton {
     'class': string;
     'disabled': boolean;
     'text': string;
     'type': string;
   }
+  interface PolocodeButtonAttributes extends StencilHTMLAttributes {
+    'class'?: string;
+    'disabled'?: boolean;
+    'text'?: string;
+    'type'?: string;
+  }
+
   interface PolocodeInput {
     'class': string;
     'disabled': boolean;
@@ -27,23 +36,7 @@ export namespace Components {
     'type': string;
     'value': string;
   }
-  interface PolocodeModal {
-    'id': string;
-    /**
-    * https://stenciljs.com/docs/properties#reflect-properties-to-attributes In some cases it may be useful to keep a Prop in sync with an attribute. In this case you can use the reflectToAttr option in the @Prop() decorator:
-    */
-    'isVisible': boolean;
-  }
-}
-
-declare namespace LocalJSX {
-  interface PolocodeButton extends JSXBase.HTMLAttributes {
-    'class'?: string;
-    'disabled'?: boolean;
-    'text'?: string;
-    'type'?: string;
-  }
-  interface PolocodeInput extends JSXBase.HTMLAttributes {
+  interface PolocodeInputAttributes extends StencilHTMLAttributes {
     'class'?: string;
     'disabled'?: boolean;
     'error'?: string;
@@ -54,36 +47,35 @@ declare namespace LocalJSX {
     'type'?: string;
     'value'?: string;
   }
-  interface PolocodeModal extends JSXBase.HTMLAttributes {
+
+  interface PolocodeModal {
+    'id': string;
+    /**
+    * https://stenciljs.com/docs/properties#reflect-properties-to-attributes In some cases it may be useful to keep a Prop in sync with an attribute. In this case you can use the reflectToAttr option in the @Prop() decorator:
+    */
+    'isVisible': boolean;
+  }
+  interface PolocodeModalAttributes extends StencilHTMLAttributes {
     'id'?: string;
     /**
     * https://stenciljs.com/docs/properties#reflect-properties-to-attributes In some cases it may be useful to keep a Prop in sync with an attribute. In this case you can use the reflectToAttr option in the @Prop() decorator:
     */
     'isVisible'?: boolean;
   }
+}
 
-  interface ElementInterfaces {
+declare global {
+  interface StencilElementInterfaces {
     'PolocodeButton': Components.PolocodeButton;
     'PolocodeInput': Components.PolocodeInput;
     'PolocodeModal': Components.PolocodeModal;
   }
 
-  interface IntrinsicElements {
-    'PolocodeButton': LocalJSX.PolocodeButton;
-    'PolocodeInput': LocalJSX.PolocodeInput;
-    'PolocodeModal': LocalJSX.PolocodeModal;
+  interface StencilIntrinsicElements {
+    'polocode-button': Components.PolocodeButtonAttributes;
+    'polocode-input': Components.PolocodeInputAttributes;
+    'polocode-modal': Components.PolocodeModalAttributes;
   }
-}
-export { LocalJSX as JSX };
-
-declare module "./stencil.core" {
-  export namespace JSX {
-    interface ElementInterfaces extends LocalJSX.ElementInterfaces {}
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
-  }
-}
-
-declare global {
 
 
   interface HTMLPolocodeButtonElement extends Components.PolocodeButton, HTMLStencilElement {}
@@ -103,6 +95,7 @@ declare global {
     prototype: HTMLPolocodeModalElement;
     new (): HTMLPolocodeModalElement;
   };
+
   interface HTMLElementTagNameMap {
     'polocode-button': HTMLPolocodeButtonElement
     'polocode-input': HTMLPolocodeInputElement
@@ -114,5 +107,6 @@ declare global {
     'polocode-input': HTMLPolocodeInputElement;
     'polocode-modal': HTMLPolocodeModalElement;
   }
-}
 
+
+}

@@ -1,0 +1,97 @@
+{
+  "tags": [
+    {
+      "label": "polocode-button",
+      "description": "",
+      "attributes": [
+        {
+          "label": "class",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "disabled",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "text",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "type",
+          "description": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "polocode-input",
+      "description": "",
+      "attributes": [
+        {
+          "label": "class",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "disabled",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "error",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "id",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "label-txt",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "placeholder",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "required",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "type",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "value",
+          "description": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "polocode-modal",
+      "description": "",
+      "attributes": [
+        {
+          "label": "id",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "is-visible",
+          "description": "https://stenciljs.com/docs/properties#reflect-properties-to-attributes\nIn some cases it may be useful to keep a Prop in sync with an attribute.\nIn this case you can use the reflectToAttr option in the @Prop() decorator:",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

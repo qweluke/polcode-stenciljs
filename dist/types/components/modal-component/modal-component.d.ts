@@ -1,3 +1,4 @@
+import '../../stencil.core';
 export declare class BtnComponent {
     id: string;
     /**
@@ -6,5 +7,5 @@ export declare class BtnComponent {
      * In this case you can use the reflectToAttr option in the @Prop() decorator:
      */
     isVisible: boolean;
-    render(): any;
+    render(): JSX.Element;
 }

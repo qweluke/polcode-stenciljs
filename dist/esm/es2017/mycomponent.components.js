@@ -1,0 +1,2 @@
+// mycomponent: Host Data, ES Module/es2017 Target
+export const COMPONENTS = [["polocode-button","qs7jqhii",1,[["class",1,0,1,2],["disabled",1,0,1,4],["el",64],["text",1,0,1,2],["type",1,0,1,2]],1],["polocode-input","lbjgvst7",1,[["class",1,0,1,2],["disabled",1,0,1,4],["error",1,0,1,2],["id",1,0,1,2],["labelTxt",1,0,"label-txt",2],["placeholder",1,0,1,2],["required",1,0,1,4],["type",1,0,1,2],["value",1,0,1,2]],1],["polocode-modal","mswsqjfw",1,[["id",1,0,1,2],["isVisible",1,1,"is-visible",4]],1]]

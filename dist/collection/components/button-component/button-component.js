@@ -1,4 +1,3 @@
-import { h } from '@stencil/core';
 export class BtnComponent {
     constructor() {
         this.type = 'button';
@@ -13,85 +12,26 @@ export class BtnComponent {
     }
     static get is() { return "polocode-button"; }
     static get encapsulation() { return "shadow"; }
-    static get originalStyleUrls() { return {
-        "$": ["button.css"]
-    }; }
-    static get styleUrls() { return {
-        "$": ["button.css"]
-    }; }
     static get properties() { return {
-        "type": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "type",
-            "reflect": false,
-            "defaultValue": "'button'"
+        "class": {
+            "type": String,
+            "attr": "class"
         },
         "disabled": {
-            "type": "boolean",
-            "mutable": false,
-            "complexType": {
-                "original": "boolean",
-                "resolved": "boolean",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "disabled",
-            "reflect": false,
-            "defaultValue": "false"
+            "type": Boolean,
+            "attr": "disabled"
         },
-        "class": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "class",
-            "reflect": false,
-            "defaultValue": "'primary'"
+        "el": {
+            "elementRef": true
         },
         "text": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "text",
-            "reflect": false,
-            "defaultValue": "''"
+            "type": String,
+            "attr": "text"
+        },
+        "type": {
+            "type": String,
+            "attr": "type"
         }
     }; }
-    static get elementRef() { return "el"; }
+    static get style() { return "/**style-placeholder:polocode-button:**/"; }
 }

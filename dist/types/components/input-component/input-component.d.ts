@@ -1,3 +1,4 @@
+import '../../stencil.core';
 export declare class BtnComponent {
     type: string;
     disabled: boolean;
@@ -8,5 +9,5 @@ export declare class BtnComponent {
     placeholder: string;
     error: string;
     id: string;
-    render(): any;
+    render(): JSX.Element;
 }
